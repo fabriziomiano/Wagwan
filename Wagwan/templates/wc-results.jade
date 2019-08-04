@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .jumbotron
+    h1 Wagwan
+    p.lead Extract topic info from Facebook posts.
+    p
+      a.btn.btn-primary.btn-large(href='/about') Learn more &raquo;
+
+  p.lead Results
+  p Barplot of the most written comment stems in the selected post comments
+  if barplot_path
+    img.img-responsive(src=barplot_path)
+  else
+    h1 Sorry! No barplot has been produced
+
+  p Word Cloud
+  if wcloud_filepath
+    img.img-responsive(src=wcloud_filepath)
+  else
+    h1 Sorry! No word cloud image has been produced
+  p
+  if csv_filepath
+    - var api_action = "/api/getcsv"+csv_filepath
+    form(method='GET' action=api_action)
+      button.btn.btn-primary(type='submit') Save CSV file &darr;
+  else
+    h1 Sorry! no csv file produced

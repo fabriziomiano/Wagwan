@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  .jumbotron
+    h1 Wagwan
+    p.lead Results
+
+  form(method='POST' action='/api/run')
+    div.form-group
+      label(for="access-token") Access Token:
+      input(type='text', name='access_token', placeholder='facebook page access token')
+    div.form-group
+      label(for="pageid") page ID:
+      input(type='text', name='page_id', placeholder='your page id, e.g. 12345678')
+    div.form-group
+      label(for="ntopwords") Number of top words:
+      input(type='text', name='n_top_words', placeholder='default 10')
+    div.form-group
+      label(for="ntopentities") Number of top entities:
+      input(type='text', name='n_top_entities', placeholder='default 10')
+    button.btn.btn-primary(type='submit') Word count n latest posts &raquo;
+    button.btn.btn-primary(type='submit') Word count by post &raquo;
+    button.btn.btn-primary(type='submit') Save &raquo;
+    button.btn.btn-primary(type='submit') Save &raquo;
+
+
+  //- form(name="add-estimation", method="POST")
+  //-     div.input
+  //-         span.label Access Token
+  //-         input(type="text", name="access-token")
+  //-     div.input
+  //-         span.label Access Token
+  //-         input(type="text", name="access-token")    
+  //-     div.actions
+  //-         input(type="submit", value="Save")
+  //- .row
+  //-   .col-md-4
+  //-     h2 Getting started
+  //-     p Flask gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development.
+  //-     p
+  //-       a.btn.btn-default(href='http://flask.pocoo.org/docs/') Learn more &raquo;
+  //-   .col-md-4
+  //-     h2 Get more libraries
+  //-     p The Python Package Index is a repository of software for the Python programming language.
+  //-     p
+  //-       a.btn.btn-default(href='https://pypi.python.org/pypi') Learn more &raquo;
+  //-   .col-md-4
+  //-     h2 Microsoft Azure
+  //-     p You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
+  //-     p
+  //-       a.btn.btn-default(href='http://azure.microsoft.com') Learn more &raquo;
+

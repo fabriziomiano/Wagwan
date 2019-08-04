@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .jumbotron
+    h1 Wagwan
+    p.lead Extract topic info from Facebook posts.
+    p
+      a.btn.btn-primary.btn-large(href='/about') Learn more &raquo;
+
+   p.lead Word Count
+   p This tool performs a simple word count of the words found in all the comment to a given post, taking into account stopwords and stemming
+
+  form(method='POST' action='/api/runwc')
+    div.form-group
+      label(for="access-token") Access Token:
+      input(type='text', name='access_token', placeholder='facebook page access token')
+    div.form-group
+      label(for="pageid") Page ID:
+      input(type='text', name='page_id', placeholder='your page id, e.g. 12345678')
+    div.form-group
+      label(for="postid") Post ID:
+      input(type='text', name='post_id', placeholder='the post id, e.g. 9123990')
+    div.form-group
+      label(for="ntopwords") Number of top words:
+      input(type='text', name='n_top_words', placeholder='default 20')
+    div.form-group
+      label(for="ntopentities") Number of top entities:
+      input(type='text', name='n_top_entities', placeholder='default 10')
+    button.btn.btn-primary(type='submit') Smart word count &raquo;

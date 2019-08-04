@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .jumbotron
+    h1 Wagwan
+    p.lead Extract topic info from Facebook posts.
+    p
+      a.btn.btn-primary.btn-large(href='/about') Learn more &raquo;
+
+   p.lead Choose analysis
+   p Word count performs a simple word count, taking into account stopwords and stemming
+   p Named-Entity Recognition is performed through the italian and english model delivered with spaCy
+   p
+    a.btn.btn-primary.btn-large(href='/wc') Smart word count
+   p
+    a.btn.btn-primary.btn-large(href='/ner') Named-Entity Recognition (NER)
+
