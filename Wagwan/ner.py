@@ -35,7 +35,7 @@ def ner(conf):
     access_token = conf["access_token"]
     page_id = conf["page_id"]
     post_id = conf["post_id"]
-    n_top_entities = conf["n_top_entities"]
+    n_top_entities = int(conf["n_top_entities"])
     data_dir_path = conf["data_dir_name"]
     data_filename = "{}_{}{}".format(conf["data_entities_prefix"], post_id, ".csv")
     plots_dir_path = conf["plots_dir_name"]
