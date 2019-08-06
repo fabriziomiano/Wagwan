@@ -1,5 +1,4 @@
 import os
-import sys
 import time
 from Wagwan import app
 from Wagwan.classes.TextPreprocessor import TextPreprocessor
@@ -34,7 +33,7 @@ def wordcount(conf):
             Check the actual post on its Facebook page 
             https://www.facebook.com/{}/posts/{}""".format(page_id, post_id)
         )
-        sys.exit(0)
+        return None, None, None
     elif len(comments) < 100:
         app.logger.warning(
             "Got {} comments. Not enough data "
