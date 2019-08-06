@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  .jumbotron
+    h1 Wagwan
+    p.lead Extract topic info from Facebook posts.
+    p
+      a.btn.btn-primary.btn-large(href='/about') Learn more &raquo;
+
+  h2 #{title}
+  p This tool extracts the named entities with the highest occurrance within the comments to a given post.
+  br
+  if(error)
+        //  qua si potrebbe mettere una gif carina
+        p
+          span.
+            #{error}
+        if (fb_url)
+          p Please either check whether #[a(href="#{fb_url}") the post] has comments or not, or double-check the provided data
+  else
+    p Fill in the required fields to run the smart word counter
+    div
+      .row
+        .col-xs-3
+          form()
+            div.form-group
+              label(for="access-token") Access Token*:
+            div.form-group
+              label(for="pageid") Page ID*:
+            div.form-group
+              label(for="postid") Post ID*:
+            div.form-group
+              label(for="lang") Post language (en, it)*:
+            div.form-group
+              label(for="ntopentities") N. of entities to plot:
+        .col-xs-6
+          form(method='POST' action='/api/run_ner')
+            div.form-group
+              input(type='text', name='access_token', placeholder='facebook access token')
+            div.form-group
+              input(type='text', name='page_id', placeholder='e.g. 12345678')
+            div.form-group
+              input(type='text', name='post_id', placeholder='e.g. 9123990')
+            div.form-group
+              input(type='text', name='lang', placeholder='')
+            div.form-group
+              input(type='text', name='n_top_entities', placeholder='default 10')
+            button.btn.btn-primary(type='submit') Run NER &raquo;
+      #note * Required fields
