@@ -4,7 +4,7 @@ RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt
-RUN python -m nltk.downloader stopwords
+RUN python -c "import nltk; nltk.download('stopwords')"
 ADD . /code/
 
 # ssh
