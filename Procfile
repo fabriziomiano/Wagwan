@@ -1,1 +1,1 @@
-web: python runserver.py
+web: python -c "import nltk; nltk.download('stopwords') && python runserver.py
