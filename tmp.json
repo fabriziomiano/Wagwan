@@ -1,0 +1,1 @@
+{"access_token": "ciao", "page_id": "123456789876532", "additional_stopwords": [], "data_dir_name": "data", "data_wc_prefix": "word_count", "data_entities_prefix": "ent_count", "plots_dir_name": "plots", "wc_plot_filename": "wordcloud", "barplot_filename": "barplot", "n_top_words": 20, "n_top_entities": 20, "it": "it_core_news_sm", "en": "en_core_web_sm"}
