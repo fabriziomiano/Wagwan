@@ -181,9 +181,10 @@ def save_barplot(data, labels, n_max, path, type_="Words"):
         list(y)[:n_max],
         palette="Blues_d")
     ax.set_title("Top {} {}".format(n_max, type_))
-    plt.xticks(rotation=30)
-    plt.xlabel(labels[0])
-    plt.ylabel(labels[1], labelpad=60, rotation=0)
+    plt.xticks(fontsize=16)
+    plt.xticks(fontsize=16)
+    plt.xlabel(labels[1], fontsize=18)
+    plt.ylabel(labels[0], fontsize=18, labelpad=60, rotation=90)
     plt.savefig(path)
 
 
