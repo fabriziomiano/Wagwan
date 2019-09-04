@@ -30,7 +30,7 @@ def contact():
         'contact.jade',
         title='Contact',
         year=datetime.now().year,
-        message='Your contact page.'
+        message='Hit me up!'
     )
 
 
@@ -41,7 +41,7 @@ def about():
         'about.jade',
         title='About',
         year=datetime.now().year,
-        message='Your application description page.'
+        message="What's \"Wagwan\"?"
     )
 
 
@@ -57,7 +57,7 @@ def wc():
 
 @app.route('/ner')
 def render_ner():
-    """Renders the wc page."""
+    """Renders the ner page."""
     return render_template(
         'ner.jade',
         title='Named-Entity Recognition',
