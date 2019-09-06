@@ -41,15 +41,14 @@ Here there are two images of the keyword-count bar plot, and the wordcloud, that
 by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/477277113022512) post:
 
 
+#### Word cloud with no stemming 
+![alt text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
+)
+
 
 #### Top 20 keywords
 
 ![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
-
-
-#### Word cloud with no stemming 
-![alt text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
-)
 
 
 #### Top 12 entities
