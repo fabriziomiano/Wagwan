@@ -56,7 +56,7 @@ https://www.facebook.com/GiveToTheNext/posts/477277113022512
 
 This is a bar plot of the top N entities extracted. 
 
-![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan//blob/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
 
 
 ## Acknowledgements
