@@ -38,11 +38,11 @@ It requires Python3+ and all the packages listed in `requirements.txt`.
 ## Results 
 
 Here there are two images of the keyword-count bar plot, and the wordcloud, that are produced
-by running the tool on this post:
-https://www.facebook.com/GiveToTheNext/posts/477277113022512
+by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/477277113022512) post:
 
 
-#### Bar plot using the top 20 words
+
+#### Top 20 keywords
 
 ![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
 
@@ -52,11 +52,12 @@ https://www.facebook.com/GiveToTheNext/posts/477277113022512
 )
 
 
-#### Bar plot using the top 12 entities
+#### Top 12 entities
 
-This is a bar plot of the top N entities extracted. 
+This is a bar plot of the top N entities extracted from
+[this](https://www.facebook.com/GiveToTheNext/posts/477277113022512) post
 
-![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan//blob/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
+![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
 
 
 ## Acknowledgements
