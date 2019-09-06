@@ -1,37 +1,69 @@
-## Welcome to GitHub Pages
+# Wagwan Fam?
 
-You can use the [editor on GitHub](https://github.com/fabriziomiano/Wagwan/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This tool serves those who have, or work for someone who owns, a facebook 
+page, and essentially want to know what the people are talking about in their post.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## What is it?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A simple front-end which can be used to run a basic, yet simple, 
+keywords extraction on facebook posts. In addition, it employs
+[spaCy](https://github.com/explosion/spaCy) default models 
+to extract named-entities from comments. Visit spaCy page to know more
+about named entities.
+This tool is pretty much a word counter that employs 
+standard NLP pre-processing, plus the NER part performed by spaCy. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+#### How does it do it?
 
-- Bulleted
-- List
+It brings up a webapp supported by a python back-end 
+which is a taylored version of [whats-the-topic](https://github.com/fabriziomiano/whats-the-topic/)
+It requires an access token to get people's comments on a selected post. 
+Additional info on how to get a token can be found at this [link](https://developers.facebook.com/docs/facebook-login/access-tokens/)
+In short, once a facebook developers account has been created, the access token can be generated through
+the [Facebook GraphAPI](https://developers.facebook.com/tools/explorer/). 
 
-1. Numbered
-2. List
+The tool performs text preprocessing (tokenization, stopwords filtering, stemming) 
+to make plots of the keyword-count plus a word cloud image - using the awesome 
+[`word_Cloud`](https://github.com/amueller/word_cloud) library.
 
-**Bold** and _Italic_ and `Code` text
+## For devs
 
-[Link](url) and ![Image](src)
-```
+This tool has been developed on Ubuntu 18.04 and macOS High Sierra, but 
+has never been seriously tested. 
+It requires Python3+ and all the packages listed in `requirements.txt`.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Results 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fabriziomiano/Wagwan/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Here there are two images of the keyword-count bar plot, and the wordcloud, that are produced
+by running the tool on this post:
+https://www.facebook.com/GiveToTheNext/posts/477277113022512
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Bar plot using the top 20 words
+
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
+
+
+#### Word cloud with no stemming 
+
+![alt text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png)
+
+
+#### Bar plot using the top 12 entities
+
+This is a bar plot of the top N entities extracted. 
+
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
+
+
+## Acknowledgements
+
+Thanks to the people at [spaCy](https://github.com/explosion/spaCy)
+for the NE part,to the people who produced 
+[facebook-sdk](https://github.com/mobolic/facebook-sdk)
+for the ease of access to the data, and finally to the guys who made 
+[word_cloud](https://amueller.github.io/word_cloud) for the awesome word-cloud images
+that can be produced.
