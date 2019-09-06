@@ -44,12 +44,12 @@ https://www.facebook.com/GiveToTheNext/posts/477277113022512
 
 #### Bar plot using the top 20 words
 
-![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
+![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
 
 
 #### Word cloud with no stemming 
-
-![alt text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png)
+![alt text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
+)
 
 
 #### Bar plot using the top 12 entities
