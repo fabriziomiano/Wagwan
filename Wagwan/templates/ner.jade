@@ -12,38 +12,31 @@ block content
   br
   if(error)
         //  qua si potrebbe mettere una gif carina
-        p
+        h2
           span.
             #{error}
         if (fb_url)
           p Please either check whether #[a(href="#{fb_url}") the post] has comments or not, or double-check the provided data
   else
-    p Fill in the required fields
-    div
-      .row
-        .col-xs-3
-          form()
-            div.form-group
-              label(for="access-token") Access Token*:
-            div.form-group
-              label(for="pageid") Page ID*:
-            div.form-group
-              label(for="postid") Post ID*:
-            div.form-group
-              label(for="lang") Post language (en, it)*:
-            div.form-group
-              label(for="ntopentities") N. of entities to plot:
-        .col-xs-6
-          form(method='POST' action='/api/run_ner')
-            div.form-group
-              input(type='text', name='access_token', placeholder='facebook access token')
-            div.form-group
-              input(type='text', name='page_id', placeholder='e.g. 12345678')
-            div.form-group
-              input(type='text', name='post_id', placeholder='e.g. 9123990')
-            div.form-group
-              input(type='text', name='lang', placeholder='')
-            div.form-group
-              input(type='text', name='n_top_entities', placeholder='default 10')
-            button.btn.btn-primary(type='submit') Run NER &raquo;
-      #note * Required fields
+    p Fill in the *required fields
+
+    form(method='POST' action='/api/run_ner')
+      .form-group
+        label(for='access_token') Access Token*
+        input#exampleFormControlInput1.form-control(type='text', name='access_token', placeholder='Facebook page access token')
+      .form-group
+        label(for='page_id') Page ID*
+        input#exampleFormControlInput1.form-control(type='text', name='page_id', placeholder='Facebook page ID, e.g. 12345678')
+      .form-group
+        label(for='page_id') Post ID*
+        input#exampleFormControlInput1.form-control(type='text', name='post_id', placeholder='Facebook post ID, e.g. 9123990')
+      .form-group
+        label(for='n_top_entities') Max number of entities*
+        input#exampleFormControlInput1.form-control(type='text', name='n_top_entities', placeholder='Default 20')
+      .form-group
+        label(for='lang') Language
+        select#exampleFormControlSelect1.form-control(name='lang')
+          option(value='en') Choose language (English default)
+          option(value='en') English
+          option(value='it') Italian
+      button.btn.btn-primary(type='submit') Run NER &raquo;

@@ -7,11 +7,14 @@ block content
     p
       a.btn.btn-primary.btn-large(href='/about') Learn more &raquo;
 
-   p.lead Choose analysis
-   p Word count performs a simple word count, taking into account stopwords and stemming.
-   p Named-Entity Recognition is performed through the italian or english model delivered with #[a(href='https://spacy.io/') spaCy].
-   p
-    a.btn.btn-primary.btn-large(href='/wc') Smart word count
-   p
-    a.btn.btn-primary.btn-large(href='/ner') Named-Entity Recognition (NER)
-
+  .row
+    .col-md-6
+      h2 Smart word count
+      p Performs a smart word count, as it groups word by their lemma and it does not take into account capitalization
+      p
+        a.btn.btn-default(href='/wc') Go to keyword extraction &raquo;
+    .col-md-6
+      h2 Named-Entity Recognition (NER)
+      p  Named-Entity Recognition is performed through the italian or english model delivered with #[a(href='https://spacy.io/') spaCy].
+      p
+        a.btn.btn-default(href='/ner') Go to Named-entity recognition &raquo;

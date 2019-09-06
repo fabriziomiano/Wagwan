@@ -41,7 +41,7 @@ def about():
         'about.jade',
         title='About',
         year=datetime.now().year,
-        message="What's \"Wagwan\"?"
+        message="Why \"Wagwan\"?"
     )
 
 

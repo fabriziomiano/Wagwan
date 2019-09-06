@@ -10,8 +10,23 @@ block content
   p
     | The reason why I chose this name is because of a friend of mine asking me
     br
-    | "Would you know how to check what people are talking about in a post of my facebook page just by looking at the comments?"
+    i #["Would you know how to check what people are talking about in a post of my facebook page just by looking at the comments?"]
     br
-    | So here we are. All you need is to create an app via facebook and get an access token, plus the facebook page id, and the post id.
+    | So here we are.
   p
     | Plus, I love how "Wagwan" sounds.
+
+  h3 How can I use Wagwan?
+  p
+    | If you manage a Facebook page and want to know what the people's comments are about in a given post, all you have to do is
+    ul#books
+      li create an facebook app #[a(href='https://developers.facebook.com/docs/app-ads/app-setup/') here]
+      li get a page access token #[a(href='https://developers.facebook.com/tools/explorer/') here]
+      li get your page id, even just by googling #[a(href='https://www.google.com/search?client=ubuntu&channel=fs&q=find+facebook+id&ie=utf-8&oe=utf-8') find my facebook id]
+      li get the post id (from the URL of the post itself)
+    | Once this info has been gathered, it is possible to produce the plots and the wordcloud image.
+  p Additional info on access token can be found on facebook for developers, #[a(href='https://developers.facebook.com/docs/facebook-login/access-tokens/') here].
+
+  h3 Notes
+  p
+    | Both the front-end and the back-end are hosted on the GitHub repo #[a(href='https://www.github.com/fabriziomiano/Wagwan') Wagwan]
