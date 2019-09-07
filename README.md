@@ -42,13 +42,13 @@ by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/47727
 
 
 #### Word cloud with no stemming 
-![alt text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
+![alt text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
 )
 
 
 #### Top 20 keywords
 
-![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
 
 
 #### Top 12 entities
@@ -56,7 +56,7 @@ by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/47727
 This is a bar plot of the top N entities extracted from
 [this](https://www.facebook.com/GiveToTheNext/posts/477277113022512) post
 
-![alt_text](https://github.com/fabriziomiano/Wagwan/blob/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
 
 
 ## Acknowledgements
