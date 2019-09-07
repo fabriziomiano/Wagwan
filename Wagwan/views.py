@@ -12,6 +12,12 @@ from Wagwan.wordcount import wordcount
 from Wagwan.ner import ner
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.jade'), 404
+
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -138,7 +144,7 @@ def run_ner():
     supported_languages = ["it", "en"]
     with open("settings.conf", "rb") as conf_in:
         conf = json.load(conf_in)
-    form = request.form
+    form = request.form.to_dict()
     try:
         conf["access_token"] = form["access_token"]
         conf["page_id"] = form["page_id"]
