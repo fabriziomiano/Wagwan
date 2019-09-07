@@ -18,9 +18,9 @@ standard NLP pre-processing, plus the NER part performed by spaCy.
 #### How does it do it?
 
 It brings up a webapp supported by a python back-end 
-which is a taylored version of [whats-the-topic](https://github.com/fabriziomiano/whats-the-topic/)
+which is a taylored version of [whats-the-topic](https://github.com/fabriziomiano/whats-the-topic/).
 It requires an access token to get people's comments on a selected post. 
-Additional info on how to get a token can be found at this [link](https://developers.facebook.com/docs/facebook-login/access-tokens/)
+Additional info on how to get a token can be found at this [link](https://developers.facebook.com/docs/facebook-login/access-tokens/).
 In short, once a facebook developers account has been created, the access token can be generated through
 the [Facebook GraphAPI](https://developers.facebook.com/tools/explorer/). 
 
