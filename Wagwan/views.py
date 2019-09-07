@@ -80,11 +80,12 @@ def run_wc():
     """
     with open("settings.conf", "rb") as conf_in:
         conf = json.load(conf_in)
-    form = request.form
+    form = request.form.to_dict()
     try:
         conf["access_token"] = form["access_token"]
         conf["page_id"] = form["page_id"]
         conf["post_id"] = form["post_id"]
+        app.logger.info("Form submitted {}".format(form))
     except KeyError:
         error = "Please fill the form"
         return render_template(
@@ -158,6 +159,7 @@ def run_ner():
                 year=datetime.now().year,
                 error=error
             )
+        app.logger.info("Form submitted {}".format(form))
     except KeyError:
         error = "Please fill the form"
         return render_template(
