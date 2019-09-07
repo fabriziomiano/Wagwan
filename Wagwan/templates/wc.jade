@@ -16,9 +16,11 @@ block content
           span.
             #{error}
         if (fb_url)
-          p Please either check whether #[a(href="#{fb_url}") the post] has comments or not, or double-check the provided data
+          p
+           | Please either check whether #[a(href="#{fb_url}") the post] has comments or not,
+           | or double-check the provided data
   else
-    p Fill in the required fields
+    p Fill in the *required fields
     form(method='POST' action='/api/run_wc')
       .form-group
         label(for='access_token') Access Token*
