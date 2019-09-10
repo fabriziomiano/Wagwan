@@ -9,7 +9,7 @@ import requests
 import seaborn as sns
 from Wagwan import app
 
-from .classes.TextPreprocessor import TextPreprocessor
+from Wagwan.classes.TextPreprocessor import TextPreprocessor
 
 
 def load_config(path):

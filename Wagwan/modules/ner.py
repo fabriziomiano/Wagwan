@@ -2,8 +2,8 @@ import os
 from datetime import datetime
 from flask import render_template
 import spacy
-from Wagwan import app
-from Wagwan.utils import (
+from Wagwan import app, PUBLIC_DIR
+from Wagwan.modules.utils import (
     get_post_data, get_comments, save_barplot,
     create_nonexistent_dir, data_to_tsv, get_entities, count_entities
 )
@@ -40,7 +40,7 @@ def ner(conf):
     data_filename = "{}_{}{}".format(conf["data_entities_prefix"], post_id, ".csv")
     plots_dir_path = conf["plots_dir_name"]
     barplot_filename = "{}_{}{}".format(conf["barplot_filename"], post_id, "_ner.png")
-    barplot_filepath = os.path.join(plots_dir_path, barplot_filename)
+    barplot_filepath = os.path.join(PUBLIC_DIR, plots_dir_path, barplot_filename)
     actual_post_id = page_id + "_" + post_id
     url_post = "https://www.facebook.com/posts/{}".format(actual_post_id)
     app.logger.info("Getting data for post {}".format(url_post))
@@ -69,14 +69,14 @@ def ner(conf):
             len(entities), len(comments))
     )
     entities_data = count_entities(entities)
-    create_nonexistent_dir(data_dir_path)
-    data_filepath = os.path.join(data_dir_path, data_filename)
+    create_nonexistent_dir(os.path.join(app.root_path, PUBLIC_DIR, data_dir_path))
+    data_filepath = os.path.join(PUBLIC_DIR, data_dir_path, data_filename)
     columns = ["entities", "count"]
-    data_to_tsv(entities_data, columns, data_filepath)
+    data_to_tsv(entities_data, columns, os.path.join(app.root_path, data_filepath))
     app.logger.info("Saved {} unique entities and their counts in {} ".format(
         len(entities_data), data_filepath))
-    create_nonexistent_dir(plots_dir_path)
+    create_nonexistent_dir(os.path.join(app.root_path, PUBLIC_DIR, plots_dir_path))
     plot_labels = ["Entities", "Counts"]
-    save_barplot(entities_data, plot_labels, n_top_entities, barplot_filepath)
+    save_barplot(entities_data, plot_labels, n_top_entities, os.path.join(app.root_path, barplot_filepath))
     app.logger.info("Bar plot saved at {}".format(barplot_filepath))
     return barplot_filepath, data_filepath
