@@ -51,6 +51,25 @@ by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/47727
 
 ![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/barplot_477277113022512.png)
 
+The data
+
+| word                                                                   | count |
+|------------------------------------------------------------------------|-------|
+| clim                                                                   | 11    |
+| years                                                                  | 9     |
+| hoax                                                                   | 6     |
+| chang                                                                  | 5     |
+| stop                                                                   | 4     |
+| planet                                                                 | 4     |
+| 10                                                                     | 4     |
+| biggest                                                                | 4     |
+| ever                                                                   | 4     |
+| giv                                                                    | 3     |
+| meat                                                                   | 3     |
+| increasing                                                             | 3     |
+| species                                                                | 3     |
+| volcanoes                                                              | 3     |
+| guess                                                                  | 3     |
 
 #### Top 12 entities
 
@@ -59,6 +78,29 @@ This is a bar plot of the top N entities extracted from
 
 ![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/barplot_476807096402847_ner.png)
 
+The data
+
+| entities                        | count |
+|---------------------------------|-------|
+| Hawaii                          | 3     |
+| Earth                           | 2     |
+| Norm Haas                       | 2     |
+| Earths                          | 1     |
+| the First Law of Thermodynamics | 1     |
+| Rene                            | 1     |
+| Al Gore                         | 1     |
+| Bill Nye                        | 1     |
+| only one                        | 1     |
+| 97 %                            | 1     |
+| at least 30                     | 1     |
+| the First Law                   | 1     |
+| 100%                            | 1     |
+| Maula Loa                       | 1     |
+| days                            | 1     |
+| Time                            | 1     |
+
+
+  
 
 ## Acknowledgements
 
