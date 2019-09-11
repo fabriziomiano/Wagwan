@@ -1,7 +1,9 @@
 # Wagwan Fam?
 
-This tool serves those who have, or work for someone who owns, a facebook 
+Thistool serves those who have, or work for someone who owns, a facebook 
 page, and essentially want to know what the people are talking about in their post.
+
+![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/shot.png)
 
 
 ## What is it?
@@ -42,8 +44,7 @@ by running the tool on [this](https://www.facebook.com/GiveToTheNext/posts/47727
 
 
 #### Word cloud with no stemming 
-![alt text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png
-)
+![alt text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/Wagwan/static/plots/single_posts/477277113022512/wordcloud_477277113022512.png)
 
 
 #### Top 20 keywords
