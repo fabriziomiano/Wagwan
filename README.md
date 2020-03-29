@@ -1,6 +1,6 @@
 # Wagwan Fam?
 
-Thistool serves those who have, or work for someone who owns, a facebook 
+This tool serves those who have, or work for someone who owns, a facebook 
 page, and essentially want to know what the people are talking about in their post.
 
 ![alt_text](https://raw.githubusercontent.com/fabriziomiano/Wagwan/master/shot.png)
